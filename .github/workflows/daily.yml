@@ -1,7 +1,7 @@
-name: Repository 3 - Unified Night Cycle (12h Offset) (04:40 AM IST)
+name: Repository 3 - Unified Night Cycle (12h Offset) (04:30 PM IST)
 on:
   schedule:
-    - cron: "10 11 * * *"
+    - cron: "0 11 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -225,7 +225,7 @@ jobs:
         env:
           ORCHESTRATOR_TOKEN: ${{ secrets.ORCHESTRATOR_TOKEN }}
           PROJECT_NAME: '007-of-six'
-          SESSION_COPY_DELAY: 5700 # Wait 95 minutes before copying sessions
+          SESSION_COPY_DELAY: 3300 # Wait 95 minutes before copying sessions
           ENABLE_SESSION_UPLOAD: 'true' # Set to 'false' to disable artifact upload
           ENABLE_ARTIFACT_UPLOAD: 'true' # Upload as Build Artifact
           ENABLE_RELEASE_UPLOAD: 'false' # Upload to GitHub Release
